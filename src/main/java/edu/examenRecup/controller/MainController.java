@@ -27,7 +27,7 @@ public class MainController {
     public void initialize() {
         User sesssionUser = AppShell.getInstance().getSessionUser();
         if (sesssionUser!=null){
-            lblWelcome.setText("Welcome" + sesssionUser.getNombre() + "(" + sesssionUser.getRole() + ")");
+            lblWelcome.setText("Welcome " + sesssionUser.getNombre() + " (" + sesssionUser.getRole() + ")");
             AppShell.getInstance().getPrimaryStage().setTitle("User Management");
 
             loadUserView();
