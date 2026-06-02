@@ -51,7 +51,7 @@
                 <HBox spacing="10.0" alignment="CENTER">
                     <Button fx:id="btnClear" text="Clear" />
                     <Button fx:id="btnCrear" text="Add" style="-fx-background-color: green; -fx-text-fill: white" />
-                    <Button fx:id="btnModificar" text="Add" style="-fx-background-color: blue; -fx-text-fill: white" />
+                    <Button fx:id="btnModificar" text="Update" style="-fx-background-color: blue; -fx-text-fill: white" />
                     <Button fx:id="btnEliminar" text="Delete" style="-fx-background-color: red; -fx-text-fill: white" />
                 </HBox>
                 <Label fx:id="lblError" textFill="red" wrapText="true" />

@@ -37,9 +37,9 @@ public class UserController {
 
             // Tarjeta con color amarillo para usuario con el rol admin
             if (user.getRole() == Role.admin) {
-                card.setStyle("-fx-background-color: yellow;");
+                card.setStyle("-fx-background-color: yellow; -fx-padding: 10; -fx-background-radius: 5;");
             } else {
-                card.setStyle("-fx-background-color: white;");
+                card.setStyle("-fx-background-color: white; -fx-padding: 10; -fx-background-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10,0,0,0)");
             }
             card.setOnMouseClicked(event -> {
                 if (onUserSelected != null) {
@@ -53,16 +53,18 @@ public class UserController {
     private VBox createCard(User user) {
         VBox card = new VBox(5);
         Label name = new Label(user.getNombre());
+        name.setStyle("-fx-font-weight: bold; -fx-text-fill: lightblue; -fx-font-size: 14px;");
 
-        Label nickname = new Label(user.getNickname());
+        Label nickname = new Label("@" + user.getNickname());
         Label email = new Label(user.getEmail());
+        email.setStyle("-fx-text-fill: #0066cc;");
 
         Label age = new Label("Edad: " + user.getEdad());
         Label role = new Label("Role: " + user.getRole());
         if (user.getRole() == Role.admin) {
-            role.setStyle("-fx-text-fill: red;");
+            role.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
         } else {
-            role.setStyle("-fx-text-fill: green;");
+            role.setStyle("-fx-text-fill: green; fx-font-weight: bold;");
         }
         card.getChildren().addAll(name, nickname, new Separator(), email, age, role);
         return  card;

@@ -10,8 +10,8 @@
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="edu.examenRecup.controller.LoginController"
-      prefHeight="400.0" prefWidth="600.0"
-      alignment="CENTER" spacing="20.0">
+      prefHeight="450.0" prefWidth="400.0"
+      alignment="CENTER" spacing="20.0" style="-fx-padding: 40;">
     <children>
         <Label text="User Login" >
             <font>
@@ -22,13 +22,13 @@
         <VBox spacing="8.0" fillWidth="true">
             <children>
                 <Label text="Email:" />
-                <TextField fx:id="txtEmail" promptText="Enter your Email" />
+                <TextField fx:id="txtEmail" promptText="Enter your Email" prefHeight="35.0" />
             </children>
         </VBox>
         <VBox spacing="8.0" fillWidth="true">
             <children>
                 <Label text="Password:" />
-                <PasswordField fx:id="txtPassword" promptText="Enter your password" />
+                <PasswordField fx:id="txtPassword" promptText="Enter your password" prefHeight="35.0"/>
             </children>
         </VBox>
         <Label fx:id="lblError" textFill="red" wrapText="true" />
