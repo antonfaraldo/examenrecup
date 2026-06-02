@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.examenRecup.controller.LoginController"
+      prefHeight="400.0" prefWidth="600.0"
+      alignment="CENTER" spacing="20.0">
+    <children>
+        <Label text="User Login" >
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <Region prefHeight="10.0" />
+        <VBox spacing="8.0" fillWidth="true">
+            <children>
+                <Label text="Email:" />
+                <TextField fx:id="txtEmail" promptText="Enter your Email" />
+            </children>
+        </VBox>
+        <VBox spacing="8.0" fillWidth="true">
+            <children>
+                <Label text="Password:" />
+                <PasswordField fx:id="txtPassword" promptText="Enter your password" />
+            </children>
+        </VBox>
+        <Label fx:id="lblError" textFill="red" wrapText="true" />
+
+        <Region prefHeight="10.0" />
+        <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="35.0" prefWidth="150.0" text="Login" style="-fx-font-size: 14px" />
+    </children>
+
+</VBox>
