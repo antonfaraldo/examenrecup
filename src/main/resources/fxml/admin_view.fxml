@@ -6,9 +6,58 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Font?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="edu.examenRecup.controller.AdminController"
+            prefHeight="500.0" prefWidth="300.0">
+    <children>
+        <VBox fx:id="adminVBox" layoutX="15.0" layoutY="15.0" prefWidth="270.0" spacing="10.0">
+            <children>
+                <Label text="Admin Control Panel">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Separator />
+                <VBox spacing="2.0">
+                    <Label text="ID (Reead only for edit):" />
+                    <TextField fx:id="txtID" editable="false" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Nombre:" />
+                    <TextField fx:id="txtName" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Nickname:" />
+                    <TextField fx:id="txtNickname" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Email:" />
+                    <TextField fx:id="txtEmail" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Edad:" />
+                    <TextField fx:id="txtAge" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Password:" />
+                    <PasswordField fx:id="txtPassword" />
+                </VBox>
+                <VBox spacing="2.0">
+                    <Label text="Role:" />
+                    <ComboBox fx:id="cmbRol" prefWidth="270.0" />
+                </VBox>
+                <HBox spacing="10.0" alignment="CENTER">
+                    <Button fx:id="btnClear" text="Clear" />
+                    <Button fx:id="btnCrear" text="Add" style="-fx-background-color: green; -fx-text-fill: white" />
+                    <Button fx:id="btnModificar" text="Add" style="-fx-background-color: blue; -fx-text-fill: white" />
+                    <Button fx:id="btnEliminar" text="Delete" style="-fx-background-color: red; -fx-text-fill: white" />
+                </HBox>
+                <Label fx:id="lblError" textFill="red" wrapText="true" />
+            </children>
+
+        </VBox>
+    </children>
 
 </AnchorPane>
